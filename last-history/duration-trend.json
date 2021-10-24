@@ -1,4 +1,9 @@
 [ {
+  "buildOrder" : 5,
+  "reportUrl" : "https://ashikkumar23.github.io/github-action-with-allure-report/5/",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
   "buildOrder" : 4,
   "reportUrl" : "https://ashikkumar23.github.io/github-action-with-allure-report/4/",
   "reportName" : "Allure Report with history",
