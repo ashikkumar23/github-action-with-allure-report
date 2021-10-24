@@ -11,6 +11,12 @@ on:
 jobs:
   run_smoke_tests:
     runs-on: ubuntu-20.04
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./tests
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -26,7 +32,36 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Prepare Allure history
+        run: |
+          cd ..
+          mkdir -p allure-results
+
       - name: Run tests with pytest
         run: |
           cd tests/
           python -m pytest -v --gherkin-terminal-reporter -s --tags="${{ github.event.inputs.tags }}"
+
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure report action
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 5
+
+      - name: Deploy Allure report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GH_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
