@@ -1,3 +1,8 @@
 [ {
+  "buildOrder" : 3,
+  "reportUrl" : "https://ashikkumar23.github.io/github-action-with-allure-report/3/",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
   "data" : { }
 } ]
