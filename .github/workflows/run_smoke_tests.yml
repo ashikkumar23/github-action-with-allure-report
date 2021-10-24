@@ -38,7 +38,7 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          python -m pytest -v --gherkin-terminal-reporter -s --tags="${{ github.event.inputs.tags }}"
+          python -m pytest -v --gherkin-terminal-reporter -s --tags="${{ github.event.inputs.tags }}" --alluredir=../allure-results
 
       - name: Get Allure history
         uses: actions/checkout@v2
