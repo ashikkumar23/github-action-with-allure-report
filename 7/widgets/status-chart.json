@@ -1,0 +1,21 @@
+[ {
+  "uid" : "41ece09c9801d410",
+  "name" : "test_get_all_user_data",
+  "time" : {
+    "start" : 1635177157563,
+    "stop" : 1635177157651,
+    "duration" : 88
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85c898d89286f6c9",
+  "name" : "test_get_a_single_user_data",
+  "time" : {
+    "start" : 1635177157654,
+    "stop" : 1635177157698,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

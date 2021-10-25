@@ -1,0 +1,39 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "step_definitions",
+    "children" : [ {
+      "name" : "test_get_employee_data",
+      "children" : [ {
+        "name" : "test_get_all_user_data",
+        "uid" : "41ece09c9801d410",
+        "parentUid" : "f40270e4eef42ec656137ccffcae9b9e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635177157563,
+          "stop" : 1635177157651,
+          "duration" : 88
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_get_a_single_user_data",
+        "uid" : "85c898d89286f6c9",
+        "parentUid" : "f40270e4eef42ec656137ccffcae9b9e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1635177157654,
+          "stop" : 1635177157698,
+          "duration" : 44
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f40270e4eef42ec656137ccffcae9b9e"
+    } ],
+    "uid" : "c6534b9819d4cfafa36079807412100c"
+  } ],
+  "name" : "suites"
+}
