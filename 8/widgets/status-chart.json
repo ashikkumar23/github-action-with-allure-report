@@ -1,0 +1,21 @@
+[ {
+  "uid" : "ae730446cdc90f19",
+  "name" : "test_get_a_single_user_data",
+  "time" : {
+    "start" : 1636391752636,
+    "stop" : 1636391753003,
+    "duration" : 367
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebb4869355acbfdc",
+  "name" : "test_get_all_user_data",
+  "time" : {
+    "start" : 1636391752509,
+    "stop" : 1636391752632,
+    "duration" : 123
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
