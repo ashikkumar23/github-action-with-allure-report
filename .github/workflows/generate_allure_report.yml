@@ -34,11 +34,11 @@ jobs:
       - name: Prepare Allure history # Step to prepare Allure history directory
         run: |
           cd ..
-          mkdir -p ${{ env.ALLURE_RESULTS_PATH }}
+          mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
 
       - name: Run tests with pytest # Step to run tests using pytest
         run: |
-          python -m pytest -v --gherkin-terminal-reporter -s --tags="${{ github.event.inputs.tags }}" --color=yes --alluredir=../${{ env.ALLURE_RESULTS_PATH }}
+          python -m pytest -v --gherkin-terminal-reporter -s --tags="${{ github.event.inputs.tags }}" --color=yes --alluredir=../${{ vars.ALLURE_RESULTS_PATH }}
 
       - name: Get Allure history # Step to retrieve Allure history
         uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
         uses: simple-elf/allure-report-action@master
         if: always() # Execute even if previous steps fail
         with:
-          allure_results: ${{ env.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
+          allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
           keep_reports: 5 # Specify the number of previous reports to keep
 
