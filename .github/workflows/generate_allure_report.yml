@@ -9,7 +9,7 @@ on:
         default: "smoke"
 
 jobs:
-  generate_allure_report:
+  generate-allure-report:
     runs-on: ubuntu-20.04 # Set the operating system for the job
 
     defaults:
